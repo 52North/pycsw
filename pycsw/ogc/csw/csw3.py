@@ -1591,7 +1591,8 @@ class Csw3(object):
             if self.parent.kvp['elementsetname'] == 'full':  # add full elements
                 for i in ['dc:date', 'dc:creator', \
                 'dc:publisher', 'dc:contributor', 'dc:source', \
-                'dc:language', 'dc:rights', 'dct:alternative']:
+                'dc:language', 'dc:rights', 'dct:alternative', \
+                'dc:coverage']:
                     val = util.getqattr(recobj, queryables[i]['dbcol'])
                     if val:
                         etree.SubElement(record,

@@ -1,0 +1,10 @@
+version: '3.0'
+services:
+  pycsw:
+    image: geopython/pycsw
+    volumes:
+      - ./pycsw/:/home/pycsw/pycsw/pycsw
+      - ./fraym:/tmp/fraym
+      - ./docker-config.cfg:/etc/pycsw/pycsw.cfg
+    ports:
+      - 8000:8000

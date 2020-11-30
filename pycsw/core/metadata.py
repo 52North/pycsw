@@ -1453,6 +1453,7 @@ def _parse_dc(context, repos, exml):
     _set(context, recobj, 'pycsw:Modified', md.modified)
     _set(context, recobj, 'pycsw:Format', md.format)
     _set(context, recobj, 'pycsw:Source', md.source)
+    _set(context, recobj, 'pycsw:Coverage', md.coverage)
 
     for ref in md.references:
         tmp = ',,%s,%s' % (ref['scheme'], ref['url'])

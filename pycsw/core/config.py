@@ -165,6 +165,7 @@ class StaticContext(object):
                 'pycsw:Relation': 'relation',
                 # links: format "name,description,protocol,url[^,,,[^,,,]]"
                 'pycsw:Links': 'links',
+                'pycsw:Coverage': 'geodescode'
             }
         }
 
@@ -322,6 +323,8 @@ class StaticContext(object):
                                  self.md_core_model['mappings']['pycsw:AccessConstraints']},
                                 'dct:spatial':
                                 {'dbcol': self.md_core_model['mappings']['pycsw:CRS']},
+                                'dc:coverage':
+                                {'dbcol': self.md_core_model['mappings']['pycsw:Coverage']},
                                 # bbox and full text map to internal fixed columns
                                 'ows:BoundingBox':
                                 {'dbcol': self.md_core_model['mappings']['pycsw:BoundingBox']},
@@ -539,6 +542,8 @@ class StaticContext(object):
                                  self.md_core_model['mappings']['pycsw:AccessConstraints']},
                                 'dct:spatial':
                                 {'dbcol': self.md_core_model['mappings']['pycsw:CRS']},
+                                'dc:coverage':
+                                {'dbcol': self.md_core_model['mappings']['pycsw:Coverage']},
                                 # bbox and full text map to internal fixed columns
                                 'ows:BoundingBox':
                                 {'dbcol': self.md_core_model['mappings']['pycsw:BoundingBox']},
